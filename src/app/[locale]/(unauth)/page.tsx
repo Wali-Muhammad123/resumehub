@@ -1,9 +1,13 @@
+import dynamic from 'next/dynamic';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
-import JsonToHtmlPreviewer from '@/components/ResumeGenerator';
 import { Footer } from '@/templates/Footer';
 import { Hero } from '@/templates/Hero';
 import { Navbar } from '@/templates/Navbar';
+
+const ResumeGenerator = dynamic(() => import('@/components/ResumeGenerator'), {
+  ssr: false,
+});
 
 export async function generateMetadata(props: { params: { locale: string } }) {
   const t = await getTranslations({
@@ -28,7 +32,7 @@ export default function IndexPage(props: { params: { locale: string } }) {
       {/* <Pricing /> */}
       {/* <FAQ /> */}
       {/* <CTA /> */}
-      <JsonToHtmlPreviewer />
+      <ResumeGenerator />
       <Footer />
     </>
   );

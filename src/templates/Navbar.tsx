@@ -31,10 +31,10 @@ const Navbar = () => {
           </>
         }
       >
-        {/* <li>
+        <li>
           <Link href="/sign-up">{t('product')}</Link>
         </li>
-
+        {/*
         <li>
           <Link href="/sign-up">{t('docs')}</Link>
         </li>

@@ -12,7 +12,7 @@ export const JsonToHtmlPreviewer = () => {
   const [htmlOutput, setHtmlOutput] = useState('');
 
   // Predefined HTML template with placeholders
-  const updateHtmlOutput = (json) => {
+  const updateHtmlOutput = (json: any) => {
     try {
       const jsonObject = JSON.parse(json);
       const output = Mustache.render(htmlTemplate, jsonObject); // Use Mustache to render template
@@ -23,7 +23,7 @@ export const JsonToHtmlPreviewer = () => {
   };
 
   // Handle JSON input change
-  const handleJsonChange = (e) => {
+  const handleJsonChange = (e: any) => {
     const json = e.target.value;
     setJsonInput(json);
     updateHtmlOutput(json);
@@ -63,6 +63,7 @@ export const JsonToHtmlPreviewer = () => {
         <h3 className="mb-2 text-lg font-semibold">HTML Preview</h3>
         <div
           className="min-h-[300px] rounded-md border border-gray-300 p-4 shadow-sm"
+          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: htmlOutput }}
         />
       </div>
