@@ -1,3 +1,10 @@
+# 1.0.0 (2024-09-06)
+
+
+### Features
+
+* **resume-viewer-v1 added:** add feature given resume-output json,  generate the pdf ([ae05269](https://github.com/Wali-Muhammad123/resumehub/commit/ae05269cf3448beb90394123f56e1131e57c2142))
+
 ## [1.6.1](https://github.com/ixartz/SaaS-Boilerplate/compare/v1.6.0...v1.6.1) (2024-08-31)
 
 
