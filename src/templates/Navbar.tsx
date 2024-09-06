@@ -31,7 +31,7 @@ const Navbar = () => {
           </>
         }
       >
-        <li>
+        {/* <li>
           <Link href="/sign-up">{t('product')}</Link>
         </li>
 
@@ -49,7 +49,7 @@ const Navbar = () => {
 
         <li>
           <Link href="/sign-up">{t('company')}</Link>
-        </li>
+        </li> */}
       </CenteredMenu>
     </Section>
   );
